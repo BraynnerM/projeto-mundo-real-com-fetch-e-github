@@ -152,6 +152,29 @@ main {
   display: none;
 }
 
+/*  EVENTS */
+.container .profile-data .events h2{
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color:#24292e;
+}
+
+.container .profile-data .events{
+  background-color: whitesmoke;
+  border-radius: 15px;
+}
+.container .profile-data .events ul{  
+  justify-content: center;
+  margin: 15px;
+}
+
+.container .profile-data .events ul li{
+  font-weight: bold;
+  color:#24292e;
+}
+
 @media (max-width: 1280px) {
   .container {
     flex-direction: column;
@@ -192,4 +215,3 @@ main {
     width: 100%;
     padding: 0;
   }
-}

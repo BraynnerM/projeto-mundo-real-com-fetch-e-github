@@ -20,10 +20,17 @@ const screen = {
                                                <ul>${repositoriesItens}</ul>
                                            </div>`
         }
-console.log(user.events)
+
         let eventsItens = ''
-        user.events.forEach(event => eventsItens += `<li><a>${event.repo.name} -${event.type}`)
         
+        let filteredEvents = user.events.filter(event => {
+            return event.type === "CreateEvent" || event.type === "PushEvent";
+        })
+        filteredEvents.forEach(event => {
+            if (event.payload.commits) {
+                eventsItens += `<li>${event.repo.name} <span>  -${event.payload.commits[0].message}</span></li>`
+            }
+        })
         if(user.events.length > 0){
             this.userProfile.innerHTML += `<div class="events section">
                                                <h2>Eventos</h2>                                               
