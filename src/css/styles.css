@@ -134,7 +134,7 @@ main {
   justify-content: center;
 }
 
-.container .profile-data .repositories ul li a{
+.container .profile-data .repositories ul li {
   padding: 20px;
   border: 1px solid grey;  
   margin: 20px;
@@ -143,16 +143,31 @@ main {
   transition: 0.3s ease-in-out;
 }
 
-.container .profile-data .repositories ul li a:hover{
+.container .profile-data .repositories ul li.info-comp{
+background-color:mediumpurple;
+color: #fff;
+}
+
+.container .profile-data .repositories ul li:hover{
   background-color:hotpink;
   color: #fff
 }
+
+.container .profile-data .repositories ul li.info-comp:hover{
+  background-color:mediumpurple;
+  }
 
 .container .profile-data.hide{
   display: none;
 }
 
 /*  EVENTS */
+
+.container .profile-data .events{
+  background-color: whitesmoke;
+  border-radius: 15px;
+}
+
 .container .profile-data .events h2{
   margin-bottom: 30px;
   text-align: center;
@@ -161,10 +176,6 @@ main {
   color:#24292e;
 }
 
-.container .profile-data .events{
-  background-color: whitesmoke;
-  border-radius: 15px;
-}
 .container .profile-data .events ul{  
   justify-content: center;
   margin: 15px;
@@ -215,3 +226,4 @@ main {
     width: 100%;
     padding: 0;
   }
+}

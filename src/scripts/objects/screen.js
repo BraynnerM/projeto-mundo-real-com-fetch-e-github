@@ -1,6 +1,6 @@
 const screen = {
     userProfile: document.querySelector('.profile-data'),
-    renderUser(user){
+    renderUser(user) {
         this.userProfile.innerHTML = `<div class="info">
                              <img src="${user.avatarUrl}" alt="Foto do perfil do usuário" />
                              <div class="data">
@@ -10,11 +10,9 @@ const screen = {
                                  <p>Seguindo: ${user.following}</p>
                              </div>
                          </div>`
-
         let repositoriesItens = ''
-        user.repositories.forEach(repo => repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`)
-
-        if(user.repositories.length > 0){
+        user.repositories.forEach(repo => repositoriesItens += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a><ul><li class="info-comp"> 🍴 ${repo.forks} </li><li class="info-comp"> ⭐ ${repo.stargazers_count} </li><li class="info-comp"> 👀 ${repo.watchers} </li><li class="info-comp"> 📒 ${repo.language ?? "Não definida"} </li></ul></li>`)
+        if (user.repositories.length > 0) {
             this.userProfile.innerHTML += `<div class="repositories section">
                                                <h2>Repositórios</h2>
                                                <ul>${repositoriesItens}</ul>
@@ -22,7 +20,7 @@ const screen = {
         }
 
         let eventsItens = ''
-        
+
         let filteredEvents = user.events.filter(event => {
             return event.type === "CreateEvent" || event.type === "PushEvent";
         })
@@ -31,7 +29,7 @@ const screen = {
                 eventsItens += `<li>${event.repo.name} <span>  -${event.payload.commits[0].message}</span></li>`
             }
         })
-        if(user.events.length > 0){
+        if (user.events.length > 0) {
             this.userProfile.innerHTML += `<div class="events section">
                                                <h2>Eventos</h2>                                               
                                                <ul>${eventsItens}</ul>
@@ -39,7 +37,7 @@ const screen = {
         }
     },
 
-    renderNotFound(){
+    renderNotFound() {
         this.userProfile.innerHTML = "<h3>Usuário não encontrado</h3>"
     }
 }
