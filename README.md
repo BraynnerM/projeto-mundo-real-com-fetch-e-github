@@ -20,7 +20,7 @@ Esta é uma solução para Quest de Javascript Avançado.
 
 Os usuários devem ser capazes de:
 
--Pesquisar o nome de um usuário do gihub e visualizar suas informações, repositórios e eventos.
+- Pesquisar o nome de um usuário do gihub e visualizar suas informações, repositórios e eventos.
 
 
 ### Captura de tela
@@ -30,7 +30,7 @@ Os usuários devem ser capazes de:
 ### Links
 
 - URL da solução: [Github](https://github.com/BraynnerM/projeto-mundo-real-com-fetch-e-github)
--  URL do site no Github Pages: [Projeto Mundo real Fetch-Github-API](https://braynnerm.github.io/projeto-mundo-real-com-fetch-e-github/)
+- URL do site no Github Pages: [Projeto Mundo real Fetch-Github-API](https://braynnerm.github.io/projeto-mundo-real-com-fetch-e-github/)
 
 ## Meu processo
 
